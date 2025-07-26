@@ -111,15 +111,15 @@
 // console.log(calculateCartPrice(200,400,300,600,9000));
 
 
-const user = {
-    username : "sam",
-    price : 199
-}
+// const user = {
+//     username : "sam",
+//     price : 199
+// }
 
-function handleObject(anyObject){
-    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);
+// function handleObject(anyObject){
+//     console.log(`username is ${anyObject.username} and price is ${anyObject.price}`);
     
-}
+// }
 
 // console.log(handleObject(user));
 
@@ -130,10 +130,15 @@ function handleObject(anyObject){
 // });
 
 
-const myNewArray = [200,500,600,300,30000]
+// const myNewArray = [200,500,600,300,30000]
 
-function returnSecondValue(getArray){
-    return getArray[1]
-}
+// function returnSecondValue(getArray){
+//     return getArray[1]
+// }
 
-console.log(returnSecondValue(myNewArray));
+// console.log(returnSecondValue(myNewArray));
+
+// we can pass array in log as well
+// console.log(returnSecondValue([200,100,300,400,220]));
+
+
