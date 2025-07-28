@@ -2,7 +2,7 @@
 // let score = "33abc"; 
 // let score = null;
 // let score = undefined;
-// let score = true;
+let score = true;
 // let score = "upasana";
 
 
@@ -48,13 +48,13 @@
 
 // console.log("1" + 2);
 // console.log(1 + "2");
-// console.log("1" + 1 + 2);           // from the point we have string from that point it will only cancatinate the values
+// console.log("1" + 1 + 2);           // from the point we have string from that point it will only concatinate the values
 // console.log( 2 + 1 + 3 + "1" + 1 + 2); 
 // console.log(1 + 1 + "2");           // whereas the values before the string  , all values get sum first and then the string value will be printed
 
 // // confusion conversions
 // console.log(+true);
-// // console.log(true+);         //gives error
+// console.log(true+);         //gives error
 // console.log(+"");
 
 // let gameCounter = 100
@@ -86,8 +86,8 @@
 
 
 // strict check(===)
-console.log("2" == 2);
-console.log("2" === 2);
+// console.log("2" == 2);
+// console.log("2" === 2);
 
 
 
