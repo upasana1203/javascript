@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM  LEARNING</title>
+</head>
+<body>
+    <UL class="language">
+        <li>JavaScript</li>
+    </UL>
+</body>
+
+<script>
+
+    // create a function to add language to the list this function will take a string as an argument and create a list item with that string
+    // this code is not an optimized because every time this has to traverse the whole DOM to find the last node
+
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+    // this will add the list item to the end of the list
+        document.querySelector('.language').appendChild(li)      
+    }
+    addLanguage("python")
+    addLanguage("typeScript")
+
+    // so 
+    // function addOptiLanguage(langName){
+    //     const li = document.createElement('li');
+    //     li.appendChild(document.createTextNode(langName))
+
+    //     // it helps to show the text in the list item
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    
+    // addOptiLanguage("jave")
+    // addOptiLanguage("ruby")
+
+    // edit the second list item to "mojo"
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang)
+    // innerHTML is not so optimized practice cause it traverses the whole DOM to find the element and then overwrites the content
+    secondLang.innerHTML = "mojo"
+    
+    // can use textcontent 
+    // const newli = document.createElement('li')
+    // newli.textContent = "mojo1"
+    // secondLang.replaceWith(newli)
+
+    // edit the third list item
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>cpp</li>'
+
+    // to REMOVE THE ELEMNT
+    const lastLang  = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
