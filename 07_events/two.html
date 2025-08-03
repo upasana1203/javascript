@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javaScript</h1>
+    <button id="stop"></button>
+</body>
+
+<script>
+    const sayName = function(){
+        console.log("upasana");
+    }
+    
+    const newName = function(){
+        document.querySelector('h1').innerHTML = "setTimeout concept"
+    }
+
+    const stopMe = setTimeout(newName, 2000);
+
+    // we can use clearTimeout to stop the execution of the function
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(stopMe)
+        console.log("stopppes");
+        
+    })
+</script>
+</html>
