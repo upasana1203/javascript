@@ -188,7 +188,7 @@ const promiseFive = new Promise(function(resolve , reject){
 
 async function consumePromiseFive(){
     // promise is an object , so we don't access it like promiseFive()
-    // so we used try catch method to handle errors
+    // async is not good with handling errors , so we used try catch method to handle errors
     try{
         const response = await promiseFive
     console.log(response);
@@ -200,3 +200,40 @@ async function consumePromiseFive(){
 }
 
 consumePromiseFive()
+
+
+// this won't give anything
+// async function getAllUsers(){
+//     const response = fetch('https://jsonplaceholder.typicode.com/users')
+//     const data = response.json()
+//     console.log(data);
+    
+// }
+// getAllUsers()
+
+// async function getAllUsers(){
+//     try{
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        
+//         // response will also tae time to get convert into json
+//         const data =  await response.json()
+//         console.log(data);
+        
+//     }catch(error){
+//         console.log("E : ", error);
+        
+//     }
+// }
+// getAllUsers()
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response) =>{
+    return response.json()
+} )
+.then((data) => {
+    console.log(data);
+    
+})
+.catch((error) => console.log(error))  
+
+//learn to read documentation of fetch
